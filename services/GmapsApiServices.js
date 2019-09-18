@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * StrapiPluginGmapsApiServices.js service
+ * GmapsApiServices.js service
  *
  * @description: A set of functions similar to controller's actions to avoid code duplication.
  */
@@ -11,7 +11,7 @@ module.exports = {
     directions: async ( origin, waypoints, destination ) =>
     {
         const googleMapsClient = require( '@google/maps' ).createClient( {
-            key: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].googleMapsClient.key,
+            key: strapi.plugins[ 'gmaps-api-services' ].googleMapsClient.key,
             Promise: Promise
         } );
 
@@ -37,12 +37,12 @@ module.exports = {
             origin,
             destination,
             waypoints,
-            mode: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.mode.DRIVING,
-            units: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.units,
-            language: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.language,
-            region: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.region,
-            alternatives: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.alternatives,
-            optimize: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.optimize,
+            mode: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.mode.DRIVING,
+            units: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.units,
+            language: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.language,
+            region: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.region,
+            alternatives: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.alternatives,
+            optimize: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.optimize,
         } )
             .asPromise()
             .then( ( response ) =>
@@ -61,7 +61,7 @@ module.exports = {
     distance: async ( origins = [], destinations = [] ) =>
     {
         const googleMapsClient = require( '@google/maps' ).createClient( {
-            key: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].googleMapsClient.key,
+            key: strapi.plugins[ 'gmaps-api-services' ].googleMapsClient.key,
             Promise: Promise
         } );
 
@@ -70,10 +70,10 @@ module.exports = {
         result = await googleMapsClient.distanceMatrix( {
             origins,
             destinations,
-            mode: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.mode.DRIVING,
-            units: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.units,
-            language: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.language,
-            region: strapi.plugins[ 'strapi-plugin-gmaps-api-services' ].config.googleMapsClient.region
+            mode: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.mode.DRIVING,
+            units: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.units,
+            language: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.language,
+            region: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.region
         } )
             .asPromise()
             .then( ( response ) =>
