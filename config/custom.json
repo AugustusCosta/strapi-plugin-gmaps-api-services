@@ -1,0 +1,38 @@
+{
+  "googleMapsClient": {
+    "key": "AIzaSyAhU466CO70xZfhs0_4uU8iXJYYjCZ70Ow",
+    "mode": {
+      "DRIVING": "driving",
+      "WALKING": "walking",
+      "BICYCLING": "bicycling",
+      "TRANSIT": "transit"
+    },
+    "avoid": {
+      "TOLLS": "tolls",
+      "HIGHWAYS": "highways",
+      "FERRIES": "ferries",
+      "INDOOR": "indoor"
+    },
+    "traffic_model": {
+      "BEST_GUESS": "best_guess",
+      "PESSIMISTIC": "pessimistic",
+      "OPTIMISTIC": "optimistic"
+    },
+    "transit_mode": {
+      "BUS": "bus",
+      "SUBWAY": "subway",
+      "TRAIN": "train",
+      "TRAM": "tram",
+      "RAIL": "rail"
+    },
+    "transit_routing_preference": {
+      "LESS_WALKING": "less_walking",
+      "FEWER_TRANSFERS": "fewer_transfers"
+    },
+    "units": "metric",
+    "language": "pt-BR",
+    "region": "BR",
+    "alternatives": false,
+    "optimize": false
+  }
+}
