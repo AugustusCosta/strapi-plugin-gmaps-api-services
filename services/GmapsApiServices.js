@@ -11,7 +11,7 @@ module.exports = {
     directions: async ( origin, waypoints, destination ) =>
     {
         const googleMapsClient = require( '@google/maps' ).createClient( {
-            key: strapi.plugins[ 'gmaps-api-services' ].googleMapsClient.key,
+            key: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.key,
             Promise: Promise
         } );
 
@@ -61,7 +61,7 @@ module.exports = {
     distance: async ( origins = [], destinations = [] ) =>
     {
         const googleMapsClient = require( '@google/maps' ).createClient( {
-            key: strapi.plugins[ 'gmaps-api-services' ].googleMapsClient.key,
+            key: strapi.plugins[ 'gmaps-api-services' ].config.googleMapsClient.key,
             Promise: Promise
         } );
 
