@@ -1,9 +1,9 @@
 {
   "name": "strapi-plugin-gmaps-api-services",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Strapi plugin for use Google Maps API services.",
   "strapi": {
-    "name": "strapi-plugin-gmaps-api-services",
+    "name": "Gmaps Api Services",
     "icon": "plug",
     "description": "Strapi plugin for use Google Maps API services."
   },
@@ -23,7 +23,8 @@
     "prepublishOnly": "npm run build"
   },
   "dependencies": {
-    "@google/maps": "^0.5.5"
+    "@google/maps": "^0.5.5",
+    "strapi-helper-plugin": "^3.0.0-beta.16.4"
   },
   "devDependencies": {
     "strapi-helper-plugin": "^3.0.0-beta.16.4"
@@ -32,6 +33,9 @@
     "name": "Augustus Costa",
     "email": "augustuscosta@gmail.com",
     "url": "https://github.com/AugustusCosta/strapi-plugin-gmaps-api-services"
+  },
+  "bugs": {
+    "url": "https://github.com/AugustusCosta/strapi-plugin-gmaps-api-services/issues"
   },
   "maintainers": [
     {
